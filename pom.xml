@@ -28,7 +28,7 @@
 		<developer>
 			<id>hoegertn</id>
 			<email>thorsten.hoeger@taimos.de</email>
-			<name>Thorsten Höger</name>
+			<name>Thorsten Hoeger</name>
 			<organization>Taimos GmbH</organization>
 			<organizationUrl>http://www.taimos.de</organizationUrl>
 			<timezone>+1</timezone>
@@ -56,9 +56,9 @@
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:git@github.com:taimos/GPSd4Java.git</connection>
-		<developerConnection>scm:git:git@github.com:taimos/GPSd4Java.git</developerConnection>
-		<url>git@github.com:taimos/GPSd4Java.git</url>
+		<connection>scm:git:git@github.com:taimos/common-gs1.git</connection>
+		<developerConnection>scm:git:git@github.com:taimos/common-gs1.git</developerConnection>
+		<url>git@github.com:taimos/common-gs1.git</url>
 	</scm>
 
 	<build>
