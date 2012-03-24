@@ -1,6 +1,6 @@
 ## GS1 Numbering Tools
 
-# Description
+### Description
 
 This projects provides a collection of utils for GS1 numbers
 
@@ -12,6 +12,6 @@ At this point you can
 * create and render GTIN-8
 * create and rende SSCC
 
-# Usage
+### Usage
 
 Maven usage will be possible after project is synced to central. This will happen with first stable version.
