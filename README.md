@@ -5,6 +5,7 @@
 This projects provides a collection of utils for GS1 numbers
 
 At this point you can
+
 * create GTIN lists for a given GLN
 * render GS1-128 codes using barcode4j
 * create GTIN with given gln and article id
