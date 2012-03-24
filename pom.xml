@@ -5,8 +5,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Collection of utils for GS1 numbers</name>
 	<description>Collection of utils for GS1 numbers</description>
-
-	<!-- <url>http://gpsd4java.forge.hoegergroup.de/</url> -->
+	<url>https://github.com/taimos/common-gs1</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
 		<name>Taimos GmbH</name>
