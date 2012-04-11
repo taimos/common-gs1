@@ -66,7 +66,7 @@ public class GTINHelper {
 	 * @param gtin
 	 *            the GTIN
 	 * @param type
-	 *            the type of the barcode [gs1-128, gtin-13, gtin-8]
+	 *            the type of the barcode [gs1-128, gtin-13]
 	 * @return the image as byte array
 	 */
 	public static byte[] getAsBytes(final String gtin, final String type) {
