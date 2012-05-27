@@ -1,10 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 	<groupId>de.taimos</groupId>
 	<artifactId>common-gs1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Collection of utils for GS1 numbers</name>
 	<description>Collection of utils for GS1 numbers</description>
+	
 	<url>https://github.com/taimos/common-gs1</url>
 	<inceptionYear>2012</inceptionYear>
 	<organization>
