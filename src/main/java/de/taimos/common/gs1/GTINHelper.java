@@ -12,22 +12,19 @@ import com.google.common.base.Strings;
  * 
  */
 public class GTINHelper {
-
+	
 	/**
-	 * @param gln
-	 *            the GLN
-	 * @param id
-	 *            the id part
+	 * @param gln the GLN
+	 * @param id the id part
 	 * @return the complete GTIN
 	 */
 	public static String createGTIN(final String gln, final int id) {
 		final String idPart = Strings.padStart(Integer.toString(id), (12 - gln.length()), '0');
 		return GS1Utils.addChecksum(gln + idPart);
 	}
-
+	
 	/**
-	 * @param gtin
-	 *            the GTIN
+	 * @param gtin the GTIN
 	 * @return the EAN13 barcode as PNG
 	 */
 	public static byte[] getAsEAN13(final String gtin) {
@@ -38,10 +35,9 @@ public class GTINHelper {
 		}
 		return new byte[0];
 	}
-
+	
 	/**
-	 * @param gtin
-	 *            the GTIN
+	 * @param gtin the GTIN
 	 * @return the GS1-128 barcode as PNG
 	 */
 	public static byte[] getAsGS1_128(final String gtin) {
@@ -50,7 +46,7 @@ public class GTINHelper {
 		}
 		return new byte[0];
 	}
-
+	
 	private static String getGS1128Code(final String gtin) {
 		if (!gtin.matches("[0-9]{13,14}")) {
 			return "";
@@ -61,12 +57,10 @@ public class GTINHelper {
 		}
 		return "01" + gtin;
 	}
-
+	
 	/**
-	 * @param gtin
-	 *            the GTIN
-	 * @param type
-	 *            the type of the barcode [gs1-128, gtin-13]
+	 * @param gtin the GTIN
+	 * @param type the type of the barcode [gs1-128, gtin-13]
 	 * @return the image as byte array
 	 */
 	public static byte[] getAsBytes(final String gtin, final String type) {

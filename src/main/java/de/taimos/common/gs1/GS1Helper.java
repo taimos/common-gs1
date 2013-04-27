@@ -10,10 +10,9 @@ import org.krysalis.barcode4j.impl.code128.EAN128Bean;
  * 
  */
 public class GS1Helper {
-
+	
 	/**
-	 * @param message
-	 *            the GS1-128 message
+	 * @param message the GS1-128 message
 	 * @return the image as byte array
 	 */
 	public static byte[] renderGS1_128(final String message) {
@@ -21,5 +20,5 @@ public class GS1Helper {
 		bean.setModuleWidth(.3);
 		return GS1Utils.renderBarcode(bean, message);
 	}
-
+	
 }

@@ -12,22 +12,19 @@ import com.google.common.base.Strings;
  * 
  */
 public class GTIN8Helper {
-
+	
 	/**
-	 * @param prefix
-	 *            the GTIN8 prefix
-	 * @param id
-	 *            the id part
+	 * @param prefix the GTIN8 prefix
+	 * @param id the id part
 	 * @return the complete GTIN
 	 */
 	public static String createGTIN8(final String prefix, final int id) {
 		final String idPart = Strings.padStart(Integer.toString(id), (7 - prefix.length()), '0');
 		return GS1Utils.addChecksum(prefix + idPart);
 	}
-
+	
 	/**
-	 * @param gtin
-	 *            the GTIN
+	 * @param gtin the GTIN
 	 * @return the GTIN8 barcode as PNG
 	 */
 	public static byte[] getAsGTIN8(final String gtin) {
@@ -37,5 +34,5 @@ public class GTIN8Helper {
 		}
 		return new byte[0];
 	}
-
+	
 }

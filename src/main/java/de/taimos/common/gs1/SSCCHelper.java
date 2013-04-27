@@ -10,25 +10,20 @@ import com.google.common.base.Strings;
  * 
  */
 public class SSCCHelper {
-
+	
 	/**
-	 * @param gln
-	 *            the GLN
-	 * @param id
-	 *            the id part
+	 * @param gln the GLN
+	 * @param id the id part
 	 * @return the complete SSCC
 	 */
 	public static String createSSCC(final String gln, final int id) {
 		return SSCCHelper.createSSCC("0", gln, id);
 	}
-
+	
 	/**
-	 * @param extensionDigit
-	 *            the SSCC extension digit
-	 * @param gln
-	 *            the GLN
-	 * @param id
-	 *            the id part
+	 * @param extensionDigit the SSCC extension digit
+	 * @param gln the GLN
+	 * @param id the id part
 	 * @return the complete SSCC
 	 */
 	public static String createSSCC(final String extensionDigit, final String gln, final int id) {
@@ -41,10 +36,9 @@ public class SSCCHelper {
 		final String idPart = Strings.padStart(Integer.toString(id), (16 - gln.length()), '0');
 		return GS1Utils.addChecksum(extensionDigit + gln + idPart);
 	}
-
+	
 	/**
-	 * @param sscc
-	 *            the SSCC
+	 * @param sscc the SSCC
 	 * @return the GS1-128 barcode as PNG
 	 */
 	public static byte[] getAsGS1_128(final String sscc) {
@@ -54,5 +48,5 @@ public class SSCCHelper {
 		}
 		return new byte[0];
 	}
-
+	
 }
