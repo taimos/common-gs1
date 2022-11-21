@@ -20,9 +20,9 @@ jobs:
       - name: clean
         run: mvn clean
       - name: Create release
-        run: mvn release prepare
+        run: mvn release:prepare
       - name: Publish to the Maven Central Repository
-        run: mvn release perform
+        run: mvn release:perform
         env:
           MAVEN_USERNAME: MVN_USER 
           MAVEN_PASSWORD: MVN_SECRET
