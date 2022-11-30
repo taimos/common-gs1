@@ -26,6 +26,10 @@ jobs:
         run: mvn clean
       - name: Create release
         run: mvn release:prepare -Dgpg.passphrase=${{ secrets.GPG_SECRET }}
+        env:
+          MAVEN_USERNAME: ${{ secrets.MVN_USER  }}
+          MAVEN_PASSWORD: ${{ secrets.MVN_SECRET }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_SECRET }}
       - name: Publish to the Maven Central Repository
         run: mvn release:perform
         env:
