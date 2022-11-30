@@ -22,6 +22,10 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.GPG_KEY }}
           passphrase: ${{ secrets.GPG_SECRET }}
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Release Script"
+          git config user.email "<>"
       - name: clean
         run: mvn clean
       - name: Create release
