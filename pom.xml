@@ -203,6 +203,6 @@
 		    	<properties>
 				<additionalparam>-Xdoclint:none</additionalparam>
 			</properties>
-		</profiles>
-	</profile>
+		</profile>
+	</profiles>
 </project>
