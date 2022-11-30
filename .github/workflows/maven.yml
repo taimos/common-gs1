@@ -17,10 +17,15 @@ jobs:
           server-password: ${{ secrets.MVN_SECRET }}
           gpg-private-key: ${{ secrets.GPG_KEY }}
           gpg-passphrase: ${{ secrets.GPG_SECRET}}
+      - name: Import GPG Key
+        uses: crazy-max/ghaction-import-gpg@v5
+        env:
+           GPG_PRIVATE_KEY: ${{ secrets.GPG_KEY }}
+           PASSPHRASE: ${{ secrets.GPG_SECRET }}
       - name: clean
         run: mvn clean
       - name: Create release
-        run: mvn release:prepare
+        run: mvn release:prepare -Dgpg.passphrase=${{ secrets.GPG_SECRET }}
       - name: Publish to the Maven Central Repository
         run: mvn release:perform
         env:
