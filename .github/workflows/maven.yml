@@ -19,9 +19,9 @@ jobs:
           gpg-passphrase: ${{ secrets.GPG_SECRET}}
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v5
-        env:
-           gpg_private_key: ${{ secrets.GPG_KEY }}
-           passphrase: ${{ secrets.GPG_SECRET }}
+        with:
+          gpg_private_key: ${{ secrets.GPG_KEY }}
+          passphrase: ${{ secrets.GPG_SECRET }}
       - name: clean
         run: mvn clean
       - name: Create release
