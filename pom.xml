@@ -204,5 +204,5 @@
 				<additionalparam>-Xdoclint:none</additionalparam>
 			</properties>
 		</profile>
-	</profile
+	</profile>
 </project>
