@@ -21,7 +21,7 @@ jobs:
       - name: clean
         run: mvn clean
       - name: Create release
-        run: mvn release:prepare -B
+        run: mvn release:prepare
       - name: Publish to the Maven Central Repository
         run: mvn release:perform -s $GITHUB_WORKSPACE/settings.xml
         env:
