@@ -22,7 +22,7 @@ jobs:
       - name: clean
         run: mvn clean
       - name: Create release
-        run: mvn release:prepare
+        run: mvn release:prepare -s $GITHUB_WORKSPACE/settings.xml
         env:
           MAVEN_USERNAME: ${{ secrets.MVN_USER  }}
           MAVEN_PASSWORD: ${{ secrets.MVN_SECRET }}
