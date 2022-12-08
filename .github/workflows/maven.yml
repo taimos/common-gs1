@@ -17,13 +17,16 @@ jobs:
           server-password: ${{ secrets.MVN_SECRET }}
           gpg-private-key: ${{ secrets.GPG_KEY }}
           gpg-passphrase: ${{ secrets.GPG_SECRET}}
+          settings-path: ${{ github.workspace }} 
       - name: clean
         run: mvn clean
       - name: Create release
-        run: mvn release:prepare
+        run: mvn release:prepare -B
       - name: Publish to the Maven Central Repository
-        run: mvn release:perform
+        run: mvn release:perform -s $GITHUB_WORKSPACE/settings.xml
         env:
           MAVEN_USERNAME: ${{ secrets.MVN_USER  }}
           MAVEN_PASSWORD: ${{ secrets.MVN_SECRET }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
